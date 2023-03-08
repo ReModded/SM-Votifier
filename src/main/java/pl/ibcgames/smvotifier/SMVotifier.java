@@ -16,9 +16,9 @@ import pl.ibcgames.smvotifier.config.ConfigLoader;
 @Plugin(
         id = "smvotifier",
         name = "SMVotifier",
-        description = "",
+        description = "Plugin dodajacy mozliwosc odbierania nagrod za glosowanie",
         authors = {"PanSzelescik", "kisi69", "kaziu687", "DEv0on"},
-        version = "1.0.0"
+        version = "1.1.0"
 )
 public class SMVotifier {
 

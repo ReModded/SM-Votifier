@@ -3,6 +3,8 @@ package pl.ibcgames.smvotifier.util;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.google.gson.JsonSyntaxException;
+import pl.ibcgames.smvotifier.SMVotifier;
+import pl.ibcgames.smvotifier.config.Config;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -17,7 +19,15 @@ public class RequestUtils {
     public static JsonObject sendRequest(String url) {
         try {
             URL _url = new URL(url);
-            HttpURLConnection con = (HttpURLConnection) _url.openConnection();
+            Config config = SMVotifier.getInstance().config;
+            Proxy proxy = config.proxy_address.isEmpty()
+                    ? null
+                    : new Proxy(
+                            Proxy.Type.HTTP,
+                            new InetSocketAddress(config.proxy_address, config.proxy_port));
+            HttpURLConnection con = (HttpURLConnection) ((proxy == null)
+                    ? _url.openConnection()
+                    : _url.openConnection(proxy));
             con.setRequestMethod("GET");
 
             con.setRequestProperty("Content-Type", "application/json; utf-8");

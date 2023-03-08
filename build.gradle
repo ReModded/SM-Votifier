@@ -3,7 +3,7 @@ plugins {
 }
 
 group = 'pl.ibcgames'
-version = '1.0'
+version = '1.1.0'
 
 dependencies {
     compileOnly 'org.spongepowered:spongeapi:7.4.0'

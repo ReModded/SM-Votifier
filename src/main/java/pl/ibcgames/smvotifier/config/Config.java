@@ -16,4 +16,10 @@ public class Config {
       "say {GRACZ} zaglosowal na serwery-minecraft.pl!",
       "say Uzyj komendy /sm-glosuj zeby zaglosowac na serwer"
     };
+
+    @Setting(comment = "Opcja tylko dla zaawansowanych, nie dotykaj jej jeśli nie wiesz co robisz!\nJeśli adres nie jest ustawiony opcja jest wyłączona")
+    public String proxy_address = "";
+
+    @Setting(comment = "Opcja tylko dla zaawansowanych, nie dotykaj jej jeśli nie wiesz co robisz!")
+    public int proxy_port = 3128;
 }
