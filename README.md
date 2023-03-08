@@ -4,3 +4,5 @@ Plugin dla serwerów Minecraft SpongeForge pozwalający na automatyczne przyznaw
 
 Więcej informacji na temat jego instalacji można znaleźć w poradniku dostępnym tutaj:
 https://serwery-minecraft.pl/konfiguracja-pluginu
+
+Nieoficjalna wersja kompatybilna z silnikiem Sponge dostępna jest tutaj: https://github.com/ReModded/SM-Votifier/tree/sponge
